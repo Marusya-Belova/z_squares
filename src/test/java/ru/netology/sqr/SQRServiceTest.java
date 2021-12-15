@@ -17,6 +17,16 @@ class SQRServiceTest {
     }
 
     @Test
+    void shouldFindSqrIncideLimit() {
+        SQRService sqrService = new SQRService();
+        int minLimit = 101;
+        int maxLimit = 9800;
+        int expected = 88;
+        int actual = sqrService.findSqr(minLimit, maxLimit);
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void shouldFindSqr0() {
         SQRService sqrService = new SQRService();
         int minLimit = 0;
